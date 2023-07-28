@@ -11893,11 +11893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\54351\\source\\repos\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\54351\\Documents\\GitHub\\prueba-tecnica-evoltis-backend\\MoviesAPI\\MoviesAPI.csproj",
       "projectName": "MoviesAPI",
-      "projectPath": "C:\\Users\\54351\\source\\repos\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
+      "projectPath": "C:\\Users\\54351\\Documents\\GitHub\\prueba-tecnica-evoltis-backend\\MoviesAPI\\MoviesAPI.csproj",
       "packagesPath": "C:\\Users\\54351\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\54351\\source\\repos\\MoviesAPI\\MoviesAPI\\obj\\",
+      "outputPath": "C:\\Users\\54351\\Documents\\GitHub\\prueba-tecnica-evoltis-backend\\MoviesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\54351\\AppData\\Roaming\\NuGet\\NuGet.Config",

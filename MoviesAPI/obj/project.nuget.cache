@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vqRj5KazWS/73m6nNIJ1Kou3csp2rlGAmGJd2j85wgXloKo0lKGIHP7Bn1/GOIWGuuJ/BnfULHnY2yMgf5uAqg==",
+  "dgSpecHash": "PJ7QdB37m6CTV4kObJHEQJOnf9Ta02mKitwjBxLq5QQc8YOD28aIwPBbeOQQN7ir/LUERvKYN/JmhzSpci85UA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\54351\\source\\repos\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
+  "projectFilePath": "C:\\Users\\54351\\Documents\\GitHub\\prueba-tecnica-evoltis-backend\\MoviesAPI\\MoviesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\54351\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\54351\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
