@@ -1,8 +1,7 @@
-﻿namespace MoviesAPI.Models
+﻿namespace MoviesAPI.Views
 {
-    public class MovieViewModel
+    public class InsertMovieRequestView
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
         public string Director { get; set; }
@@ -14,4 +13,3 @@
         public string Image { get; set; }
     }
 }
-

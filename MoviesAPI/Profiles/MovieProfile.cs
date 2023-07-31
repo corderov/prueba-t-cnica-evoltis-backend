@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MoviesAPI.Models;
+using MoviesAPI.Views;
 
 namespace MoviesAPI.Profiles
 {
@@ -7,8 +8,9 @@ namespace MoviesAPI.Profiles
     {
 
         public MovieProfile() {
-            CreateMap<Movie, MovieViewModel>();
-            CreateMap<MovieViewModel, Movie>();
+            CreateMap<Movie, GetMovieResponseView>();
+            CreateMap<InsertMovieRequestView, Movie>();
+            CreateMap<UpdateMovieRequestView, Movie>();
         }
     }
 }

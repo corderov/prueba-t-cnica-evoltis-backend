@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI.Models;
 using MoviesAPI.Repositories;
+using MoviesAPI.Views;
 
 namespace MoviesAPI.Services
 {
@@ -24,28 +25,28 @@ namespace MoviesAPI.Services
             return true;
         }
 
-        public async Task<IEnumerable<MovieViewModel>> GetAllMovies()
+        public async Task<IEnumerable<GetMovieResponseView>> GetAllMovies()
         {
            var movies = await _repository.GetAllMovies();
-            return _mapper.Map<IEnumerable<MovieViewModel>>(movies);
+            return _mapper.Map<IEnumerable<GetMovieResponseView>>(movies);
         }
 
-        public async Task<MovieViewModel> GetMovieById(int id)
+        public async Task<GetMovieResponseView> GetMovieById(int id)
         {
             var movie = await _repository.GetMovieById(id);
-            return _mapper.Map<MovieViewModel>(movie);
+            return _mapper.Map<GetMovieResponseView>(movie);
         }
 
-        public async Task<bool> InsertMovie(MovieViewModel movieViewModel)
+        public async Task<bool> InsertMovie(InsertMovieRequestView insertMovieView)
         {
-            var movie = _mapper.Map<Movie>(movieViewModel);
+            var movie = _mapper.Map<Movie>(insertMovieView);
             await _repository.InsertMovie(movie);
             return true;
         }
 
-        public async  Task<bool> UpdateMovie(MovieViewModel movieViewModel)
+        public async  Task<bool> UpdateMovie(UpdateMovieRequestView updateMovieView)
         {
-            var movie = _mapper.Map<Movie>(movieViewModel);
+            var movie = _mapper.Map<Movie>(updateMovieView);
             await _repository.UpdateMovie(movie);
             return true;
         }

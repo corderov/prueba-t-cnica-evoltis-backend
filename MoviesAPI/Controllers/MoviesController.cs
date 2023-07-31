@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MoviesAPI.Models;
 using MoviesAPI.Repositories;
 using MoviesAPI.Services;
+using MoviesAPI.Views;
 
 namespace MoviesAPI.Controllers
 {
@@ -41,7 +41,7 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertMovie([FromBody] MovieViewModel movie)
+        public async Task<IActionResult> InsertMovie([FromBody] InsertMovieRequestView movie)
         {
             if (movie == null)
             {
@@ -58,7 +58,7 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMovie([FromBody] MovieViewModel movie)
+        public async Task<IActionResult> UpdateMovie([FromBody] UpdateMovieRequestView movie)
         {
             if (movie == null)
             {

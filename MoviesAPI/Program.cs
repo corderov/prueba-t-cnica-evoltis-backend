@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MoviesAPI;
-using MoviesAPI.Models;
+using MoviesAPI.Data;
 using MoviesAPI.Repositories;
 using MoviesAPI.Services;
 

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using MoviesAPI.Data;
 using MoviesAPI.Models;
 
 namespace MoviesAPI.Repositories
