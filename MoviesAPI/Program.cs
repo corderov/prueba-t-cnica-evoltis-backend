@@ -16,6 +16,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddCors(options => options.AddPolicy(name: "MovieAppOrigin",
+    policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+
+    }));
 
 
 builder.Services.AddDbContext<MoviesDbContext>(options =>
@@ -29,6 +35,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("MovieAppOrigin");
 
 app.UseHttpsRedirection();
 

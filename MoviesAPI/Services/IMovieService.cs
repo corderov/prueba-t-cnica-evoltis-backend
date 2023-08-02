@@ -6,8 +6,8 @@ namespace MoviesAPI.Services
     {
         Task<IEnumerable<GetMovieResponseView>> GetAllMovies();
         Task<GetMovieResponseView> GetMovieById(int id);
-        Task<bool> InsertMovie(InsertMovieRequestView movie);
-        Task<bool> UpdateMovie(UpdateMovieRequestView movie);
+        Task<GetMovieResponseView> InsertMovie(InsertMovieRequestView movie);
+        Task<GetMovieResponseView> UpdateMovie(UpdateMovieRequestView movie);
         Task<bool> DeleteMovie(int id);
     }
 }

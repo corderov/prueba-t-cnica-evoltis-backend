@@ -37,18 +37,18 @@ namespace MoviesAPI.Services
             return _mapper.Map<GetMovieResponseView>(movie);
         }
 
-        public async Task<bool> InsertMovie(InsertMovieRequestView insertMovieView)
+        public async Task<GetMovieResponseView> InsertMovie(InsertMovieRequestView insertMovieView)
         {
             var movie = _mapper.Map<Movie>(insertMovieView);
-            await _repository.InsertMovie(movie);
-            return true;
+            var newMovie = await _repository.InsertMovie(movie);
+            return _mapper.Map<GetMovieResponseView>(newMovie);
         }
 
-        public async  Task<bool> UpdateMovie(UpdateMovieRequestView updateMovieView)
+        public async  Task<GetMovieResponseView> UpdateMovie(UpdateMovieRequestView updateMovieView)
         {
             var movie = _mapper.Map<Movie>(updateMovieView);
-            await _repository.UpdateMovie(movie);
-            return true;
+            var updateMovie = await _repository.UpdateMovie(movie);
+            return _mapper.Map<GetMovieResponseView>(updateMovie);
         }
     }
 }

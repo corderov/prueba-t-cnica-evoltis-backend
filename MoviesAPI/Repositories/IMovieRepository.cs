@@ -6,8 +6,8 @@ namespace MoviesAPI.Repositories
     {
         Task<IEnumerable<Movie>> GetAllMovies();
         Task<Movie> GetMovieById(int id);
-        Task<bool> InsertMovie(Movie movie);
-        Task<bool> UpdateMovie(Movie movie);
+        Task<Movie> InsertMovie(Movie movie);
+        Task<Movie> UpdateMovie(Movie movie);
         Task<bool> DeleteMovie(int id);
     }
 }

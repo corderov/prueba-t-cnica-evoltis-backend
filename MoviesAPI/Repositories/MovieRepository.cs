@@ -38,20 +38,20 @@ namespace MoviesAPI.Repositories
             return await _context.Movies.FindAsync(id);
         }
 
-        public async Task<bool> InsertMovie(Movie movie)
+        public async Task<Movie> InsertMovie(Movie movie)
         {
             
             await _context.Movies.AddAsync(movie);
             await _context.SaveChangesAsync();
-            return true;
+            return movie;
 
         }
 
-        public async Task<bool> UpdateMovie(Movie movie)
+        public async Task<Movie> UpdateMovie(Movie movie)
         {
             var existingMovie = await _context.Movies.FindAsync(movie.Id);
             if (existingMovie == null)
-                return false;
+                return null ;
             existingMovie.Title = movie.Title;
             existingMovie.Genre = movie.Genre;
             existingMovie.Director = movie.Director;
@@ -62,7 +62,7 @@ namespace MoviesAPI.Repositories
             existingMovie.Language = movie.Language;
             existingMovie.Image = movie.Image;
             await _context.SaveChangesAsync();
-            return true;
+            return movie;
         }
     }
 }

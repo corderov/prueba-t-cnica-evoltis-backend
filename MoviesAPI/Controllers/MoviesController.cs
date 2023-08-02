@@ -71,7 +71,7 @@ namespace MoviesAPI.Controllers
 
             var response = await _service.UpdateMovie(movie);
 
-            return NoContent();
+            return Ok(response);
         }
 
 
